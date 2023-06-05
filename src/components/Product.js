@@ -3,14 +3,19 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const Product = ({product}) => {
-    console.log(product)
+console.log(product.attributes.isNew)
+    // console.log(product.attributes)
     return (
         <Link>
             <div className='grad w-full h-[362px] rounded-[8px] overflow-hidden relative group'>
                 {/*badge*/}
-                <div className='absolute bg-accent text-primary text-[12px] font-extrabold uppercase top-4 right-4 px-2
+               {/* {product.attributes.isNew?(
+                    <div className='absolute bg-accent text-primary text-[12px] font-extrabold uppercase top-4 right-4 px-2
                  rounded-full z-10' >new</div>
-
+                    :(
+                        ''
+                        )
+                )}*/}
                 {/*image*/}
                 <div className='w-full h-[200px] flex items-center justify-center relative transition-all'>
                     <img

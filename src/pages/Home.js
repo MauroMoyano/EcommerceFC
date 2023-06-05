@@ -7,6 +7,7 @@ import ProductSlider from "../components/ProductSlider";
 const Home = () => {
   //get new products
   const { data } = useFetch('products?populate=*&filters[isNew]=true')
+    console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'+data)
   return (
       <div className='mb-16'>
           <div className='container mx-auto' >
