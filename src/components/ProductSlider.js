@@ -4,6 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 // import swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import '../slider.css'
 // import required modules
 import {Pagination, Navigation} from "swiper";
@@ -23,7 +24,7 @@ const ProductSlider = ({data}) => {
                         spaceBetween: 30
                     },
                     1024: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                         spaceBetween: 30
                     },
                     1440: {
