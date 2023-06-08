@@ -12,7 +12,7 @@ const Hero = () => {
             <div className='flex flex-col gap-y-[30px] xl:flex-row xl:gap-x-[30px] '>
                 {/*  sidebar  */}
                 <div>
-                    <CategoryNav/>
+                    <CategoryNav />
                 </div>
                 {/*  main sidebar  */}
                 <div className='w-full max-w-lg lg:max-w-[734px] mx-auto'>
