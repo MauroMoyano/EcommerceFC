@@ -17,9 +17,9 @@ const Header = () => {
     const [catNavMobile, setCatNavMobile] = useState(false)
     return <header className='bg-primary py-6 fixed w-full top-0 z-40 xl:relative xl:mb-[30px]'>
         <div className='container mx-auto'>
-            <div className='flex flex-row gap-4 lg:items-center justify-between mb-4 lg:mb-0'>
+            <div className='flex flex-row gap-4 lg:items-center justify-between mb-4 xl:mb-0'>
             {/*    menu     */}
-                <div className='text-3xl xl:hidden cursor-pointer'>
+                <div onClick={()=> setCatNavMobile(true)} className='text-3xl xl:hidden cursor-pointer'>
                     <FiMenu/>
                 </div>
             {/*  category nav mobile  */}
@@ -35,14 +35,16 @@ const Header = () => {
                     <SearchForm/>
                 </div>
                 {/*     phone & cart    */}
-                <div>
+                <div className='flex items-center gap-x-[10px]'>
                     {/*     phone      */}
-                    <div>Need help? 123 456 789</div>
+                    <div className='hidden xl:flex uppercase'>Need help? 123 456 789</div>
                     {/*     Cart icon      */}
                     <div onClick={()=> setIsOpen(!isOpen)} className='relative cursor-pointer'>
                         <SlBag className='text-2xl'/>
                     {/*     amount       */}
-                        <div>2</div>
+                        <div className='bg-accent text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold tracking-[-0.1em]'>
+                            4
+                        </div>
                     </div>
                 {/*    cart     */}
                     <div className={`${isOpen ? 'right-0' : '-right-full'} bg-[#0e0f10] shadow-xl fixed top-0 bottom-0 w-full z-10 max-w-[500px] transition-all duration-300`}>
@@ -51,7 +53,7 @@ const Header = () => {
                 </div>
             </div>
             {/* searchForm - show on mobile only */}
-            <div className='lg:hidden'>
+            <div className='xl:hidden'>
                 <SearchForm />
             </div>
         </div>

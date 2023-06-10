@@ -7,7 +7,7 @@ import PromoImg1 from '../img/promo_img1.png'
 import PromoImg2 from '../img/promo_img2.png'
 
 const Hero = () => {
-    return <section className='mb-[30px] pt-36 lg:pt-0'>
+    return <section className='mb-[30px] pt-36 xl:pt-0'>
         <div className='container mx-auto'>
             <div className='flex flex-col gap-y-[30px] xl:flex-row xl:gap-x-[30px] '>
                 {/*  sidebar  */}
