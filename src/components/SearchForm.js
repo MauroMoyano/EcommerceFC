@@ -1,12 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 // icons
 import {FiSearch} from "react-icons/fi";
 // useNavigate hook
-import { useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const SearchForm = () => {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsAnimating(false)
+        }, 1000);
+        // clear timeout event
+        return () => clearTimeout(timeout);
+    })
 
     const handleSearchInput = (event) => {
         setSearchTerm(event.target.value);
@@ -14,16 +23,19 @@ const SearchForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if(searchTerm.length > 0){
+        if (searchTerm.length > 0) {
             navigate(`/search?query=${searchTerm}`)
-            document.querySelector('input').value='';
-        }else{
-            console.log('Please search for something');
+            document.querySelector('input').value = '';
+            setSearchTerm('')
+        } else {
+            // if input is empty set animation to true
+            console.log('entro')
+            setIsAnimating(true);
         }
     }
 
     return (
-        <form onClick={handleSubmit} className='w-full relative '>
+        <form onClick={handleSubmit} className={`${isAnimating ? 'animate-shake' : 'animate-none'} w-full relative`}>
             <input
                 onChange={handleSearchInput}
                 className='input'
