@@ -10,13 +10,13 @@ import {CartContext} from "../context/CartContext";
 
 const ProductDetails = () => {
     const {id} = useParams();
-    console.log(id)
     // get product data base on the id
     const {data} = useFetch(`/products?populate=*&filters[id][$eq]=${id}`);
     if (!data) {
         return <div className='container mx-auto '>LOADING...</div>
     }
-
+    // category title
+    const categoryTitle = data[0].attributes.categories.data[0].attributes.title;
     return (
         <div className='mb-16 pt-44 lg:pt-[30px] xl:pt-0'>
             <div className='container mx-auto'>
@@ -50,7 +50,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 {/*    related products     */}
-                <RelatedProducts/>
+                <RelatedProducts categoryTitle={categoryTitle} />
             </div>
         </div>
     );
