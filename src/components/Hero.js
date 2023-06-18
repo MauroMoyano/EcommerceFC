@@ -3,8 +3,8 @@ import React from 'react';
 import CategoryNav from "./CategoryNav";
 import MainSlider from "./MainSlider";
 // images
-import PromoImg1 from '../img/promo_img1.png'
-import PromoImg2 from '../img/promo_img2.png'
+import PromoImg1 from '../img/promo_img1.jpg'
+import PromoImg2 from '../img/promo_img2.jpg'
 
 const Hero = () => {
     return <section className='mb-[30px] pt-36 xl:pt-0'>
@@ -32,7 +32,7 @@ const Hero = () => {
                             </a>
                         </div>
                     {/*    img      */}
-                        <img className='absolute z-20 -top-2 -right-4' src={PromoImg1} alt=''/>
+                        <img className='absolute z-20 top-0 rounded-lg right-0 h-auto w-[40%]' src={PromoImg1} alt=''/>
                     </div>
                     {/*    promo 2   */}
                     <div className='grad flex-1 h-[250px] rounded-[8px] overflow-hidden relative p-6'>
@@ -46,7 +46,7 @@ const Hero = () => {
                             </a>
                         </div>
                         {/*    img      */}
-                        <img className='absolute z-20 top-4 -right-6' src={PromoImg2} alt=''/>
+                        <img className='absolute z-20 top-0 rounded-lg right-0 h-auto w-[40%]' src={PromoImg2} alt=''/>
                     </div>
                 </div>
             </div>

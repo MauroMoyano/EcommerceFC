@@ -3,7 +3,7 @@
 }
 .mainSlider .swiper-pagination-bullet,
 .productSlider .swiper-pagination-bullet {
-  background: #f6cd46;
+  background: whitesmoke;
 }
 
 .productSlider .swiper-button-prev::after {
@@ -13,7 +13,7 @@
 .productSlider .swiper-button-prev::after,
 .productSlider .swiper-button-next::after {
   font-size: 2rem;
-  color: #f6cd46;
+  color: whitesmoke;
   padding: 2rem;
   width: 200px;
 }

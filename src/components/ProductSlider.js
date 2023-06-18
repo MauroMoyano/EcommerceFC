@@ -13,9 +13,7 @@ import Product from "../components/Product";
 
 const ProductSlider = ({data}) => {
     return (
-        <Swiper modules={[Pagination, Navigation]}
-                loop={false}
-                navigation={true}
+        <Swiper modules={[Pagination, Navigation]} loop={false} navigation={true}
                 breakpoints={{
                     320: {
                         slidesPerView: 1,

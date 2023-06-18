@@ -16,10 +16,16 @@ const Product = ({product}) => {
                     '')
                 }
                 <div className='w-full h-[200px] flex items-center justify-center relative transition-all'>
-                    <img
-                        className='w-[160px] h-[160px] group-hover:scale-90'
+                    {product.attributes.image.data.attributes.url.length
+                        ? <img
+                        className='w-auto h-[160px] group-hover:scale-90 rounded-lg'
                         src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
                         alt=''/>
+                        : <img
+                            className='w-[160px] h-[160px] group-hover:scale-90 rounded-lg'
+                            src={`http://localhost:1337${product.attributes.photos.data.attributes.url}`}
+                            alt=''/>
+                    }
                 </div>
 
                 {/*    text     */}

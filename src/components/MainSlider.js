@@ -9,32 +9,34 @@ import '../slider.css'
 // import required modules
 import {Pagination} from "swiper";
 // img
-import CameraImg from '../img/camera.png'
+import SubZero from '../img/Sub Zero.jpeg'
+import Goku from '../img/Goku.jpg'
+import Gengar from '../img/Gengar.jpeg'
 
 // data
 const sliderData = [
     {
-        img: CameraImg,
-        preTitle: 'Special offer',
-        titlePart1: 'Save 20%',
-        titlePart2: 'On your',
-        titlePart3: 'first order',
+        img: SubZero,
+        preTitle: 'Los mas vendidos',
+        titlePart1: 'Descuento de 20%',
+        titlePart2: 'en tu',
+        titlePart3: 'primer compra',
+        btnText: '¡Comprame!'
+    },
+    {
+        img: Goku,
+        preTitle: 'Los mas vendidos',
+        titlePart1: 'con tu compra',
+        titlePart2: 'tenes descuento',
+        titlePart3: 'en un busto!',
         btnText: 'Shop now'
     },
     {
-        img: CameraImg,
-        preTitle: 'Special offer',
-        titlePart1: 'Save 20%',
-        titlePart2: 'On your',
-        titlePart3: 'first order',
-        btnText: 'Shop now'
-    },
-    {
-        img: CameraImg,
-        preTitle: 'Special offer',
-        titlePart1: 'Save 20%',
-        titlePart2: 'On your',
-        titlePart3: 'first order',
+        img: Gengar,
+        preTitle: 'Los mas vendidos',
+        titlePart1: 'Tiempo limitado',
+        titlePart2: '20% off',
+        titlePart3: 'atrapalos ya!',
         btnText: 'Shop now'
     }
 ]
@@ -53,9 +55,9 @@ const MainSlider = () => {
                 {
                     sliderData.map((slide, index) => {
                         return <SwiperSlide key={index}>
-                            <div className='flex flex-col lg:flex-row h-full p-[20px] md:p-[60px]'>
+                            <div className='flex flex-col xl:bg-primary lg:flex-row h-full p-[20px] md:p-[60px]'>
                                 {/*    text     */}
-                                <div className='w-full lg:flex-1'>
+                                <div className='w-full lg:flex-1 md:h-[20rem]'>
                                     <div className='uppercase mb-1 text-center lg:text-left'>
                                         {slide.preTitle}
                                     </div>
@@ -64,13 +66,13 @@ const MainSlider = () => {
                                         {slide.titlePart2}<br/>
                                         {slide.titlePart3}
                                     </div>
-                                    <button className='btn btn-accent mx-auto lg:mx-0'>
+                                    <button className='btn btn-accent mx-auto  lg:mx-0'>
                                         Shop now
                                     </button>
                                 </div>
                                 {/*    img     */}
                                 <div className='flex-1'>
-                                    <img className='xl:absolute xl:-right-16 xl:-bottom-12'
+                                    <img className='xl:absolute rounded-xl xl:-right-[0rem] xl:-bottom-[0rem] h-full'
                                          src={slide.img}
                                          alt=""
                                     />

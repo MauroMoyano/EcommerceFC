@@ -18,11 +18,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        body: '#1D1F23',
-        primary: '#151618',
+        body: '#0869da',
+        primary: '#084c9c',
         accent: {
-          DEFAULT: '#F6CD46',
-          hover: '#E1B72E',
+          DEFAULT: '#04B1B3',
+          hover: '#048BBD',
         },
       },
       backgroundImage: {

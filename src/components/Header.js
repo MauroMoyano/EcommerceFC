@@ -28,16 +28,16 @@ const Header = () => {
                 </div>
             {/*    logo     */}
                 <Link to={'/'}>
-                    <img src={Logo} alt='' />
+                    <img className='w-20' src={Logo} alt='' />
                 </Link>
             {/*    searchForm - show only on desktop    */}
-                <div className='hidden w-full xl:flex xl:max-w-[734px] '>
+                <div className='hidden w-full xl:flex xl:max-w-[734px]'>
                     <SearchForm/>
                 </div>
                 {/*     phone & cart    */}
                 <div className='flex items-center gap-x-[10px]'>
                     {/*     phone      */}
-                    <div className='hidden xl:flex uppercase'>Need help? 123 456 789</div>
+                    <div className='hidden xl:flex uppercase'>Respondemos consultas<br/> +543855757594</div>
                     {/*     Cart icon      */}
                     <div onClick={()=> setIsOpen(!isOpen)} className='relative cursor-pointer'>
                         <SlBag className='text-2xl'/>
